@@ -1,0 +1,22 @@
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin:  0 auto;
+}
+
+.grid_full-width {
+    width: 100%;
+}
+
+.grid_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.grid_col-3 {
+    width: 25%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
