@@ -6,8 +6,7 @@
 }
 
 .app {
-    margin-bottom: 100px;
-
+    
 }
 
 .header {
@@ -275,10 +274,12 @@
 }
 
 .pagination .page-item {
+    display: block;
     color: #555;
     text-align: center;
     text-decoration: none;
     width: 32px;
+    height: 32px;
     line-height: 32px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -293,4 +294,31 @@
     color: #fff;
     background-color: #ff4949;
     border-color: #ff4949;
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-img img {
+    display: block;
+    width: 100%;
+}
+
+.footer-info {
+    margin-top: 30px;
+}
+
+.footer-info-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.footer-info-text {
+    color: #424453;
+    font-size: 14px;
+    line-height: 1.6;
 }
