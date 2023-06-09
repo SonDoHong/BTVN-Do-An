@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input id="upload" type="file" />
+
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+        <script src="https://unpkg.com/geofirestore@5.2.0/dist/geofirestore.js"></script>
+        <script src="https://cdn.firebase.com/libs/geofire/5.0.1/geofire.min.js"></script>
+        <!-- <script type="module" src="./js/firebase.js"></script> -->
+
+        <!-- Nhúng file js để kiểm tra user đã login hay chưa -->
+        <!-- <script src="./script.js"></script> -->
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyBX4mAZtMfvMi0FP045_TBDkg8iKVntIUU",
+                authDomain: "do-an-c587f.firebaseapp.com",
+                databaseURL: "https://do-an-c587f-default-rtdb.firebaseio.com",
+                projectId: "do-an-c587f",
+                storageBucket: "do-an-c587f.appspot.com",
+                messagingSenderId: "928801420475",
+                appId: "1:928801420475:web:94305027271621c9b7259e",
+                measurementId: "G-B0R645PVW0",
+            };
+
+            // Initialize Firebase
+            // const app = initializeApp(firebaseConfig);
+            firebase.initializeApp(firebaseConfig);
+
+            var database = firebase.firestore();
+
+            // var database = analytics.firestore();
+            var ref = database.collection("pitch");
+            $(document).ready(function () {
+                $("#upload").change(function (even) {
+                    var input = even.target;
+                    // console.log($(input).val());
+                    handleFileSelectcar(even);
+                });
+            });
+
+            var storageRefcar = firebase.storage().ref("images");
+
+            function handleFileSelectcar(evt) {
+                var f = evt.target.files[0];
+                var reader = new FileReader();
+
+                reader.onload = (function (theFile) {
+                    return function (e) {
+                        var filePayload = e.target.result;
+                        var hash = CryptoJS.SHA256(Math.random() + CryptoJS.SHA256(filePayload));
+                        var val = f.name;
+                        var ext = val.split(".")[1];
+                        var docName = val.split("fakepath")[1];
+                        var filename = f.name.replace(/C:\\fakepath\\/i, "");
+
+                        var timestamp = Number(new Date());
+                        var filename = filename.split(".")[0] + "_" + timestamp + "." + ext;
+                        var uploadTask = storageRefcar.child(filename).put(theFile);
+                        console.log(uploadTask);
+                        uploadTask.on(
+                            "state_changed",
+                            function (snapshot) {
+                                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                                console.log("Upload is " + progress + "% done");
+                                jQuery("#uploding_image_car").text("Image is uploading...");
+                            },
+                            function (error) {},
+                            function () {
+                                uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+                                    console.log(downloadURL)
+                                    // jQuery("#uploding_image_car").text("Upload is completed");
+
+                                    // carPictureURL = downloadURL;
+                                    // $(".car_image").empty();
+                                    // $(".car_image").append('<img class="rounded" style="width:50px" src="' + carPictureURL + '" alt="image">');
+                                });
+                            }
+                        );
+                    };
+                })(f);
+                reader.readAsDataURL(f);
+            }
+        </script>
+    </body>
+</html>

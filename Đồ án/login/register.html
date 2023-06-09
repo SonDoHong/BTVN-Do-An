@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css login/base.css">
+    <link rel="stylesheet" href="./css login/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="login">
+            <div class="login-header">
+                <h3 class="login-header-title">ĐĂNG KÝ</h3>
+            </div>
+
+            <form class="login-form" id="register-form" action="">
+                <div class="login-form-item">
+                    <label class="login-from-item-text" for="tel">Họ và tên</label>
+                    <input type="text" id="user_name" name="user_name" placeholder="Họ và tên">
+                </div>
+
+                <div class="login-form-item">
+                    <label class="login-from-item-text" for="tel">Số điện thoại</label>
+                    <input type="text" id="tel" name="tel" placeholder="Nhập số điện thoại">
+                </div>
+                
+                <div class="login-form-item">
+                    <label class="login-from-item-text" for="email">email</label>
+                    <input type="email" id="email" name="email" placeholder="Email của bạn">
+                </div>
+
+                <div class="login-form-item">
+                    <label class="login-from-item-text" for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" placeholder="Mật khẩu">
+                </div>
+
+                <div class="login-form-item">
+                    <label class="login-from-item-text" for="password_again">Xác nhận mật khẩu</label>
+                    <input type="password" id="password_again" name="password_again" placeholder="Nhập lại mật khẩu">
+                </div>
+
+                <button type="submit" class="btn btn-form">ĐĂNG KÝ</button>
+
+                <div class="register-form-footer">
+                    <div class="register-form-footer-title">
+                        Bạn đã có tài khoản
+                    </div>
+
+                    <a href="#" class="btn btn-login">Đăng nhập</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://unpkg.com/geofirestore@5.2.0/dist/geofirestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/geofire/5.0.1/geofire.min.js"></script>
+    <script src="./js login/script.js"></script>
+
+    <!-- Nhúng file js để kiểm tra user đã login hay chưa -->
+    <script src="../js/index.js"></script>
+</body>
+</html>

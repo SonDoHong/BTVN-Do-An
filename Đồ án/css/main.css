@@ -1,5 +1,7 @@
 .btn {
     border: none;
+    height: 36px;
+    line-height: 36px;
     padding: 0 20px;
     border-radius: 4px;
     cursor: pointer;
@@ -9,6 +11,7 @@
     font-size: 16px;
     color: #fff;
     background-color: #F49C4A;
+    /* margin-left: 20px; */
 }
 
 .btn-search:hover {

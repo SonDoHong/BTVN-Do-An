@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sân bóng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/details.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header-container">
+                <div class="header-logo"><a href="/index.html">HANOI FOOTBALL</a></div>
+    
+                <div class="header-search">
+                    <input id="search" type="search">
+                    <label for="search">
+                        <i class="header-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </div>
+    
+                <div class="header-user">
+                    <div class="header-user-login">Đăng nhập</div>
+                    <span class="header-user-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                </div>
+                
+                <div class="header-user-2">
+                    <div class="header-user-name"></div>
+                    <span class="header-user-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+    
+                    <div class="header-user-sub">
+                        <a href="#" class="header-user-sub-link">Thông tin cá nhân</a>
+                        <a href="#" id="log_out" class="header-user-sub-link">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider"></div>
+
+        <div class="container">
+
+            <div class="container-body">
+                <div class="container-body-heading">
+                    <div class="grid">
+                        <h3 class="container-body-title">Sân bóng Viettel</h3>
+                        <P class="container-body-title-sub">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Hà Nội
+                        </P>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div id="pitch_img-list" class="grid_row">
+                        <div class="grid_col-6">
+                            <img src="/img/Sân bóng 5.jpg" alt="Ảnh sân bóng.">
+                        </div>
+
+                        <div class="grid_col-6">
+                            <div class="grid_full-width">
+                                <div class="grid_row">
+                                    <div class="grid_col-6">
+                                        <img src="/img/Sân bóng 6.jpg" alt="Ảnh sân bóng.">
+                                    </div>
+
+                                    <div class="grid_col-6">
+                                        <img src="/img/Sân bóng 6.jpg" alt="Ảnh sân bóng.">
+                                    </div>
+
+                                    <div class="grid_col-6">
+                                        <img src="/img/Sân bóng 6.jpg" alt="Ảnh sân bóng.">
+                                    </div>
+
+                                    <div class="grid_col-6">
+                                        <img src="/img/Sân bóng 6.jpg" alt="Ảnh sân bóng.">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-img">
+                <img src="./img/Bóng đá footer 1.png" alt="footer img">
+            </div>
+
+            <div class="footer-info">
+                <h4 class="footer-info-title">THÔNG TIN LIÊN HỆ</h4>
+
+                <P class="footer-info-text">Công ty Cổ Phần Thương Mại Và Xây Dựng Thế Giới Thể Thao</P>
+                <p class="footer-info-text">Giấy chứng nhận đăng ký kinh doanh số: 0123456789</p>
+                <p class="footer-info-text">Do sở kế hoạch và đầu tư Thành phố Hà Nội cấp ngày: 30/06/2020</p>
+                <p class="footer-info-text">Copyright 2021 HanoiFootball.vn. Bản quyền thuộc về Thế Giới Thể Thao</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://unpkg.com/geofirestore@5.2.0/dist/geofirestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/geofire/5.0.1/geofire.min.js"></script>
+    <script type="module" src="./js/firebase.js"></script>
+
+    <!-- Nhúng file js để kiểm tra user đã login hay chưa -->
+    <script src="./js/index.js"></script>
+</body>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css login/base.css">
+    <link rel="stylesheet" href="./css login/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="login">
+            <div class="login-header">
+                <h3 class="login-header-title">ĐĂNG NHẬP</h3>
+            </div>
+
+            <form class="login-form" id="login-form">
+                <div class="login-form-item">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="email" name="email" placeholder="Nhập email hoặc số điện thoại">
+                </div>
+
+                <div class="login-form-item">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" placeholder="Nhập mật khẩu">
+                </div>
+
+                <div class="login-form-list-sub">
+                    <div class="login-form-sub-item">
+                        <input type="checkbox" id="save">
+                        <label for="save">Ghi nhớ đăng nhập</label>
+                    </div>
+
+                    <div class="login-form-sub-item">
+                        <a href="#">Quên mật khẩu</a>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-form">ĐĂNG NHẬP</button>
+            </form>
+
+            <div class="login-footer">
+                <div class="login-footer-title">Đăng nhập bằng tài khoản mạng xã hội</div>
+                <div class="login-footer-list">
+                    <a href="#" class="btn btn-footer btn-fb">
+                        Facebook
+                    </a>
+
+                    <a href="#" class="btn btn-footer btn-gg">
+                        Google
+                    </a>
+                </div>
+
+                <div class="link-register">
+                    <a href="#" class="btn btn-register">Đăng ký tài khoản</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://unpkg.com/geofirestore@5.2.0/dist/geofirestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/geofire/5.0.1/geofire.min.js"></script>
+    <script src="./js login/script.js"></script>
+
+    <!-- Nhúng file js để kiểm tra user đã login hay chưa -->
+    <script src="../js/index.js"></script>
+</body>
+</html>

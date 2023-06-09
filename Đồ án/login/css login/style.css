@@ -1,0 +1,25 @@
+.register-form-footer {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.register-form-footer-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.btn-login {
+    text-decoration: none;
+    color: #19A702;
+}
+
+.btn-login:hover {
+    color: #26f806;
+}
+
+label.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: inline-block;
+}
